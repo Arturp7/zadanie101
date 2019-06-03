@@ -21,20 +21,37 @@ public class Truck extends Car{
         this.load = load;
     }
 
+
+//    void carRange() {
+//        if (super.isAirConditioning()) {
+//            double distance = (getVolume() * 100) / (getAvgMileage() + 1.6);
+//            distance = distance-((load*0.5)/100);
+//            System.out.println("Zasięg ciężarówki  o ładowności "+ load +" kg z włączoną klimatyzacją wynosi  " + distance);
+//
+//        } else if (!super.isAirConditioning()) {
+//            double distance = (getVolume() * 100) / getAvgMileage();
+//            distance = distance-((load*0.5)/100);
+//            System.out.println("Zasięg ciężarówki o ładowności " + load + "kg  z wyłączoną klimatyzacją wynosi  "+ distance);
+//
+//        }
+    //}
     @Override
-    void carRange() {
-        if (super.isAirConditioning() == true) {
+    String carRange1(){
+        if(super.isAirConditioning()){
             double distance = (getVolume() * 100) / (getAvgMileage() + 1.6);
             distance = distance-((load*0.5)/100);
-            System.out.println("Zasięg ciężarówki  o ładowności "+ load +" kg z włączoną klimatyzacją wynosi  " + distance);
-
-        } else if (super.isAirConditioning() == false) {
+            return "Zasięg ciężarówki  o ładowności "+ load +" kg z włączoną klimatyzacją wynosi  " + distance ;
+        } else {
             double distance = (getVolume() * 100) / getAvgMileage();
             distance = distance-((load*0.5)/100);
-            System.out.println("Zasięg ciężarówki o ładowności " + load + "kg  z wyłączoną klimatyzacją wynosi  "+ distance);
-
+            return "Zasięg ciężarówki o ładowności " + load + "kg  z wyłączoną klimatyzacją wynosi  "+ distance;
         }
+
     }
+
+
+
+
 
 
 }

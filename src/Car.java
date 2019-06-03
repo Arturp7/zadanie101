@@ -20,14 +20,22 @@ public class Car extends Vehicle {
     }
 
 
-    void carRange() {
-        if (airConditioning == true) {
-            double distance = (getVolume() * 100) / (getAvgMileage() + 0.8);
-            System.out.println(("Zasięg pojazdu z włączoną klimatyzacją wynosi  " + distance));
-        } else if (airConditioning == false) {
-            System.out.println("Zasięg pojazdu z wyłączoną klimatyzacją wynosi  " + super.range());
-        }
+//    void carRange() {
+//        if (airConditioning ) {
+//            double distance = (getVolume() * 100) / (getAvgMileage() + 0.8);
+//            System.out.println(("Zasięg pojazdu z włączoną klimatyzacją wynosi  " + distance));
+//        } else if (!airConditioning) {
+//            System.out.println("Zasięg pojazdu z wyłączoną klimatyzacją wynosi  " + super.range());
+//        }
+//
+//    }
 
+    String carRange1(){
+        if(airConditioning){
+            double distance = (getVolume() * 100) / (getAvgMileage() + 0.8);
+            return "Zasięg pojazdu z włączoną klimatyzacją wynosi  " + distance ;
+        } else
+          return "Zasięg pojazdu z wyłączoną klimatyzacją wynosi  " + super.range();
 
     }
 

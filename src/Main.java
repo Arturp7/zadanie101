@@ -17,9 +17,9 @@ public class Main {
         cars[3] = truck2;
 
         for (Car tmp : cars) {
-            System.out.print(tmp.getName() + " " + tmp.getVolume() + " " + tmp.getAvgMileage() + " "
-                    + tmp.isAirConditioning() + " ");
-            tmp.carRange();
+            System.out.println(tmp.getName() + " " + tmp.getVolume() + " " + tmp.getAvgMileage() + " "
+                    + tmp.isAirConditioning() + " "  + tmp.carRange1());
+           // tmp.carRange();
         }
         System.out.println("Włączanie klimatyzacji w pojazdach");
         car1.setAirConditioning(true);
@@ -29,9 +29,9 @@ public class Main {
 
 
         for (Car tmp : cars) {
-            System.out.print(tmp.getName() + " " + tmp.getVolume() + " " + tmp.getAvgMileage() + " "
-                    + tmp.isAirConditioning() + " ");
-            tmp.carRange();
+            System.out.println(tmp.getName() + " " + tmp.getVolume() + " " + tmp.getAvgMileage() + " "
+                    + tmp.isAirConditioning() + " "+ tmp.carRange1());
+            //tmp.carRange();
         }
 
     }
