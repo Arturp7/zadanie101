@@ -36,15 +36,15 @@ public class Truck extends Car{
 //        }
     //}
     @Override
-    String carRange1(){
+    double carRange1(){
         if(super.isAirConditioning()){
             double distance = (getVolume() * 100) / (getAvgMileage() + 1.6);
             distance = distance-((load*0.5)/100);
-            return "Zasięg ciężarówki  o ładowności "+ load +" kg z włączoną klimatyzacją wynosi  " + distance ;
+            return  distance ;
         } else {
             double distance = (getVolume() * 100) / getAvgMileage();
             distance = distance-((load*0.5)/100);
-            return "Zasięg ciężarówki o ładowności " + load + "kg  z wyłączoną klimatyzacją wynosi  "+ distance;
+            return  distance;
         }
 
     }

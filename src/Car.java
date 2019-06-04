@@ -30,12 +30,12 @@ public class Car extends Vehicle {
 //
 //    }
 
-    String carRange1(){
+    double carRange1(){
         if(airConditioning){
             double distance = (getVolume() * 100) / (getAvgMileage() + 0.8);
-            return "Zasięg pojazdu z włączoną klimatyzacją wynosi  " + distance ;
+            return  distance ;
         } else
-          return "Zasięg pojazdu z wyłączoną klimatyzacją wynosi  " + super.range();
+          return  super.range();
 
     }
 
